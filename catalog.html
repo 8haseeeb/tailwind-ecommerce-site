@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Pink Dark Catalog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#ec4899',
+              dark: '#1f1f1f',
+              card: '#2a2a2a',
+            },
+            animation: {
+              fade: 'fadeIn 2s ease-out',
+              bouncein: 'bounceIn 1s ease-out',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: 0 },
+                '100%': { opacity: 1 },
+              },
+              bounceIn: {
+                '0%, 100%': { transform: 'translateY(-10%)', opacity: 0 },
+                '50%': { transform: 'translateY(0)', opacity: 1 },
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-dark text-white">
+    <!-- Hero Section -->
+    <section class="text-center py-16 bg-gradient-to-br from-pink-600 via-fuchsia-800 to-black animate-fade">
+      <h1 class="text-4xl md:text-6xl font-bold text-white animate-bouncein">
+        Discover Our Beautiful Catalog
+      </h1>
+      <p class="mt-4 text-pink-300 text-lg">Modern Design, Elegant Feel</p>
+    </section>
+
+    <!-- Categories Grid -->
+    <section class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div class="bg-card rounded-2xl p-6 hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-pink-500">
+        <img src="./assets/images/product-chair.png" alt="Chair" class="rounded-xl mb-4" />
+        <h2 class="text-xl font-semibold text-primary">Stylish Chair</h2>
+        <p class="text-gray-300 mt-2">$45 <span class="line-through text-gray-500">$500</span></p>
+        <button class="mt-4 bg-primary px-4 py-2 rounded-lg hover:bg-pink-700 transition">Add to Cart</button>
+      </div>
+
+      <div class="bg-card rounded-2xl p-6 hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-pink-500">
+        <img src="./assets/images/product-sofa.png" alt="Sofa" class="rounded-xl mb-4" />
+        <h2 class="text-xl font-semibold text-primary">Luxury Sofa</h2>
+        <p class="text-gray-300 mt-2">$45 <span class="line-through text-gray-500">$500</span></p>
+        <button class="mt-4 bg-primary px-4 py-2 rounded-lg hover:bg-pink-700 transition">Add to Cart</button>
+      </div>
+
+      <div class="bg-card rounded-2xl p-6 hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-pink-500">
+        <img src="./assets/images/kitchen.png" alt="Kitchen" class="rounded-xl mb-4" />
+        <h2 class="text-xl font-semibold text-primary">Modern Kitchen</h2>
+        <p class="text-gray-300 mt-2">$45 <span class="line-through text-gray-500">$500</span></p>
+        <button class="mt-4 bg-primary px-4 py-2 rounded-lg hover:bg-pink-700 transition">Add to Cart</button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-gray-400 py-6 border-t border-pink-900">
+      &copy; 2025 Your Brand. All rights reserved.
+    </footer>
+  </body>
+</html>

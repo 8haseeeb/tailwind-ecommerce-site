@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - Beautiful Redesign</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: '#ffe4f1',
+              accent: '#ff66a3',
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.8s ease-out',
+              'float': 'float 3s ease-in-out infinite',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: 0 },
+                '100%': { opacity: 1 },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0px)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-background text-gray-800 animate-fade-in">
+    <main class="min-h-screen flex flex-col items-center justify-center px-4">
+      <div class="w-full max-w-md bg-white p-8 rounded-2xl shadow-xl animate-fade-in">
+        <div class="text-center mb-6">
+          <h1 class="text-3xl font-extrabold text-accent mb-2 animate-float">Create Your Account</h1>
+          <p class="text-gray-600">Please fill in the form to continue</p>
+        </div>
+        <form class="space-y-4">
+          <div>
+            <label for="name" class="block text-sm font-medium">Full Name</label>
+            <input type="text" placeholder="ABDUL HASEEB" class="mt-1 w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-accent focus:outline-none" />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium">Email Address</label>
+            <input type="email" placeholder="user@mail.com" class="mt-1 w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-accent focus:outline-none" />
+          </div>
+          <div>
+            <label for="password" class="block text-sm font-medium">Password</label>
+            <input type="password" placeholder="••••••••" class="mt-1 w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-accent focus:outline-none" />
+          </div>
+          <div>
+            <label for="confirm" class="block text-sm font-medium">Confirm Password</label>
+            <input type="password" placeholder="••••••••" class="mt-1 w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-accent focus:outline-none" />
+          </div>
+          <div class="flex items-center">
+            <input type="checkbox" class="h-4 w-4 text-accent border-gray-300 rounded" />
+            <label for="terms" class="ml-2 text-sm">I agree to the <a href="#" class="text-accent underline">Terms & Conditions</a></label>
+          </div>
+          <button type="submit" class="w-full bg-accent hover:bg-pink-500 text-white font-semibold py-2 rounded-lg transition duration-200">Create Account</button>
+        </form>
+        <p class="mt-6 text-center text-sm text-gray-600">OR SIGN UP WITH</p>
+        <div class="mt-4 flex gap-3">
+          <button class="w-1/2 bg-blue-700 hover:bg-blue-800 text-white py-2 rounded-lg">Facebook</button>
+          <button class="w-1/2 bg-orange-500 hover:bg-orange-600 text-white py-2 rounded-lg">Google</button>
+        </div>
+        <p class="mt-4 text-center text-sm">Already have an account? <a href="login.html" class="text-accent underline">Login now</a></p>
+      </div>
+    </main>
+  </body>
+</html>
